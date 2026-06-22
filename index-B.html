@@ -48,6 +48,16 @@
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 600px) {
+    .wrap { padding-left: 18px !important; padding-right: 18px !important; }
+    header .wrap { gap: 10px !important; }
+    header .head { font-size: 22px !important; }
+    header a.btn-accent { padding: 8px 14px !important; font-size: 12px !important; }
+    .fig { width: 74vw !important; max-width: 300px; }
+    .hero-stats { gap: 0 !important; }
+    .hero-stats > div { width: 100% !important; padding: 14px 0 0 0 !important; border-left: none !important; border-top: 1px solid var(--line) !important; }
+    .hero-stats > div:first-child { border-top: none !important; padding-top: 0 !important; }
+  }
 </style>
 </head>
 <body>
@@ -78,7 +88,7 @@
         <a href="#apply" class="btn-accent" style="padding: 15px 30px; border-radius: var(--radius); font-size: 15px; font-weight: 600; box-shadow: 0 8px 24px -12px var(--accent);">지원서 작성하기</a>
         <a href="#guide" style="text-decoration: none; padding: 15px 30px; border-radius: var(--radius); background: transparent; color: var(--text); font-size: 15px; font-weight: 600; border: 1px solid var(--line);">캠페인 개요 보기</a>
       </div>
-      <div class="rise" style="display: flex; flex-wrap: wrap; gap: 0; margin-top: 44px; border-top: 1px solid var(--line);">
+      <div class="rise hero-stats" style="display: flex; flex-wrap: wrap; gap: 0; margin-top: 44px; border-top: 1px solid var(--line);">
         <div style="padding: 18px 30px 0 0;"><div class="head" style="font-size: 24px;">₩100,000</div><div style="font-size: 12.5px; color: var(--muted); margin-top: 4px; letter-spacing: 0.03em;">건당 고료</div></div>
         <div style="padding: 18px 30px 0; border-left: 1px solid var(--line);"><div class="head" style="font-size: 24px;">Instagram</div><div style="font-size: 12.5px; color: var(--muted); margin-top: 4px; letter-spacing: 0.03em;">콘텐츠 플랫폼</div></div>
         <div style="padding: 18px 0 0 30px; border-left: 1px solid var(--line);"><div class="head" style="font-size: 24px;">팔로워 무관</div><div style="font-size: 12.5px; color: var(--muted); margin-top: 4px; letter-spacing: 0.03em;">지원 조건</div></div>
@@ -253,7 +263,7 @@
   function figure(b) {
     return '<figure class="fig" style="flex:none;width:280px;margin:0;border-radius:calc(var(--radius) + 6px);overflow:hidden;border:1px solid var(--line);background:var(--bg);transition:transform .3s, box-shadow .3s;">' +
       '<div style="aspect-ratio:3/4;background:#fff;overflow:hidden;border-bottom:1px solid var(--line);"><img src="' + IMG + encodeURIComponent(b.file) + '" alt="' + b.name + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>' +
-      '<figcaption style="padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;"><span class="head" style="font-size:21px;color:var(--text);white-space:nowrap;">' + b.name + '</span><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Partner</span></figcaption>' +
+      '<figcaption style="padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:8px;"><span class="head" style="font-size:' + (b.name.length > 20 ? 12 : b.name.length > 14 ? 15 : 20) + 'px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;">' + b.name + '</span><span style="flex:none;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">Partner</span></figcaption>' +
       '</figure>';
   }
   var aHtml = lineup.concat(lineup).map(figure).join('');
