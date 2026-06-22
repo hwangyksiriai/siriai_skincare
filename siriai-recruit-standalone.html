@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Siriai · 2026 하반기 스킨케어 크리에이터 모집 (고료 100,000원)</title>
+<title>Siriai · 2026 하반기 스킨케어 크리에이터 모집</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&family=Black+Han+Sans&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <style>
   /* ===== THEME TOKENS ===== editorial 기본. mood 변경하려면 아래 값 교체 ===== */
   :root {
@@ -183,7 +182,7 @@
         <label class="lbl"><span>우편번호 <span class="req">*</span></span>
           <div style="display: flex; gap: 10px;">
             <input class="field" name="zip" placeholder="00000" style="flex: 1;" required>
-            <button type="button" style="flex: none; padding: 0 22px; border: 1px solid var(--text); border-radius: var(--radius); background: var(--text); color: var(--bg); font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap;" id="zipSearchBtn">주소 검색</button>
+            <button type="button" style="flex: none; padding: 0 22px; border: 1px solid var(--text); border-radius: var(--radius); background: var(--text); color: var(--bg); font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap;">주소 검색</button>
           </div>
         </label>
         <label class="lbl"><span>배송지 주소 <span class="req">*</span></span><input class="field" name="address" placeholder="도로명 주소" required></label>
@@ -232,8 +231,6 @@
 <script>
 (function () {
   var IMG = 'https://siriai-skincare-seven.vercel.app/images/';
-  var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwNpcZCYAjNp2fl0Ddvaasi8zgMpRtyHmEG1emqyGoB4lHYvGAfal6d2jSIZXoTO7mT3g/exec';
-  var CAMPAIGN_AMOUNT = '100,000원';
   var lineup = [
     { name: 'COSRX', file: 'cosrx.png' },
     { name: 'if:fu', file: 'itfu.png' },
@@ -253,24 +250,23 @@
       '<figcaption style="padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;"><span class="head" style="font-size:21px;color:var(--text);white-space:nowrap;">' + b.name + '</span><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Partner</span></figcaption>' +
       '</figure>';
   }
-  var aHtml = lineup.concat(lineup).map(figure).join('');
-  var bRev = lineup.slice().reverse(); var bHtml = bRev.concat(bRev).map(figure).join('');
-  document.getElementById('mqA').innerHTML = aHtml;
-  document.getElementById('mqB').innerHTML = bHtml;
+  var a = lineup.concat(lineup).map(figure).join('');
+  var b = lineup.slice().reverse(); b = b.concat(b).map(figure).join('');
+  document.getElementById('mqA').innerHTML = a;
+  document.getElementById('mqB').innerHTML = b;
 
   // option toggle
-  var supportType = 'all';
   var indicator = document.getElementById('optIndicator');
   var brandSelect = document.getElementById('brandSelect');
   var optBtns = document.querySelectorAll('[data-opt]');
   optBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      supportType = btn.getAttribute('data-opt');
-      indicator.style.transform = supportType === 'individual' ? 'translateX(100%)' : 'translateX(0)';
+      var opt = btn.getAttribute('data-opt');
+      indicator.style.transform = opt === 'individual' ? 'translateX(100%)' : 'translateX(0)';
       optBtns.forEach(function (x) {
-        x.style.color = x.getAttribute('data-opt') === supportType ? 'var(--on-accent)' : 'var(--muted)';
+        x.style.color = x.getAttribute('data-opt') === opt ? 'var(--on-accent)' : 'var(--muted)';
       });
-      brandSelect.style.display = supportType === 'individual' ? 'block' : 'none';
+      brandSelect.style.display = opt === 'individual' ? 'block' : 'none';
     });
   });
 
@@ -289,7 +285,7 @@
       return '<div data-i="' + i + '" style="position:relative;cursor:pointer;padding:20px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);transition:border-color .2s;">' +
         (on ? '<div style="position:absolute;inset:0;border:2px solid var(--accent);border-radius:var(--radius);pointer-events:none;"></div><div style="position:absolute;top:12px;right:12px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>' : '') +
         '<div class="head" style="font-size:20px;">' + fb.name + '</div>' +
-        '<a href="' + fb.link + '" target="_blank" rel="noopener" data-link="1" style="display:inline-block;margin-top:10px;font-size:12.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);">상세보기 →</a>' +
+        '<a href="' + fb.link + '" target="_blank" data-link="1" style="display:inline-block;margin-top:10px;font-size:12.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);">상세보기 →</a>' +
         '</div>';
     }).join('');
     selCount.textContent = selected.length > 0 ? '· ' + selected.length + '개 선택됨' : '';
@@ -314,90 +310,11 @@
     agreeMark.style.display = agreed ? 'flex' : 'none';
   });
 
-  var form = document.getElementById('applyForm');
-  function val(n) { var el = form.querySelector('[name="' + n + '"]'); return el ? (el.value || '').trim() : ''; }
-
-  // 휴대폰 자동 포맷
-  var phoneEl = form.querySelector('[name="phone"]');
-  if (phoneEl) {
-    phoneEl.addEventListener('input', function () {
-      var v = this.value.replace(/[^0-9]/g, '').slice(0, 11);
-      if (v.length < 4) this.value = v;
-      else if (v.length < 8) this.value = v.slice(0, 3) + '-' + v.slice(3);
-      else this.value = v.slice(0, 3) + '-' + v.slice(3, 7) + '-' + v.slice(7);
-    });
-  }
-
-  // 카카오 주소검색 (페이지 내 모달 embed)
-  var zipBtn = document.getElementById('zipSearchBtn');
-  if (zipBtn) {
-    zipBtn.addEventListener('click', function () {
-      var overlay = document.createElement('div');
-      overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:16px;';
-      var box = document.createElement('div');
-      box.style.cssText = 'background:#fff;width:100%;max-width:450px;border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);';
-      var bar = document.createElement('div');
-      bar.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #eee;font-size:14px;font-weight:600;';
-      bar.innerHTML = '<span>배송지 검색</span>';
-      var closeBtn = document.createElement('button');
-      closeBtn.type = 'button'; closeBtn.textContent = '✕';
-      closeBtn.style.cssText = 'border:none;background:none;font-size:16px;cursor:pointer;color:#888;';
-      bar.appendChild(closeBtn);
-      var embed = document.createElement('div');
-      embed.style.cssText = 'width:100%;height:480px;';
-      box.appendChild(bar); box.appendChild(embed); overlay.appendChild(box);
-      document.body.appendChild(overlay);
-      function remove() { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }
-      closeBtn.addEventListener('click', remove);
-      overlay.addEventListener('click', function (e) { if (e.target === overlay) remove(); });
-      new daum.Postcode({
-        oncomplete: function (data) {
-          var full = data.roadAddress || data.jibunAddress;
-          var zipEl = form.querySelector('[name="zip"]');
-          var addrEl = form.querySelector('[name="address"]');
-          if (zipEl) zipEl.value = data.zonecode;
-          if (addrEl) addrEl.value = full;
-          remove();
-          var d = form.querySelector('[name="addressDetail"]');
-          if (d) d.focus();
-        },
-        width: '100%', height: '100%'
-      }).embed(embed);
-    });
-  }
-
-  // submit → 구글 시트 전송
-  form.addEventListener('submit', function (e) {
+  // submit
+  document.getElementById('applyForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    if (supportType === 'individual' && selected.length === 0) { alert('개별 지원 시 최소 한 개 이상의 브랜드를 선택해 주세요.'); return; }
     if (!agreed) { alert('필수 동의 항목에 체크해 주세요.'); return; }
-
-    var payload = {
-      amount: CAMPAIGN_AMOUNT,
-      support_type: supportType === 'all' ? '전체 지원' : '개별 지원',
-      brands: supportType === 'all' ? '전체' : selected.join(', '),
-      name: val('name'),
-      instagram: val('instagram'),
-      phone: val('phone'),
-      email: val('email'),
-      zonecode: val('zip'),
-      address: val('address'),
-      address_detail: val('addressDetail'),
-      notes: val('memo'),
-      agree: '동의'
-    };
-    if (SHEET_ENDPOINT && SHEET_ENDPOINT.indexOf('PASTE_') !== 0) {
-      fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) }).catch(function (err) { console.error('시트 전송 실패:', err); });
-    }
     alert('지원서가 제출되었습니다.');
-    form.reset();
-    selected = []; renderBrands();
-    agreed = false; agreeMark.style.display = 'none';
-    supportType = 'all';
-    indicator.style.transform = 'translateX(0)';
-    optBtns.forEach(function (x) { x.style.color = x.getAttribute('data-opt') === 'all' ? 'var(--on-accent)' : 'var(--muted)'; });
-    brandSelect.style.display = 'none';
   });
 })();
 </script>
