@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시리아이 스킨케어 크리에이터 모집 · 고료 200,000원</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1C1917',
+                            muted: '#78716C',
+                            accent: '#C87A6B',
+                            accentHover: '#B66A5B',
+                            bg: '#FDFBF7',
+                            card: '#FFFFFF',
+                            border: '#E7E5E4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Premium Font Family Load -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 카카오 우편번호 서비스 스크립트 -->
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-brand-bg text-stone-900 antialiased py-8 md:py-16 px-4">
+
+    <!-- 와이드 고감도 전체 페이지 레이아웃 구조 (max-w-2xl 확장) -->
+    <div class="w-full max-w-2xl mx-auto space-y-12">
+        
+        <!-- TOP BRANDING ROW -->
+        <div class="flex justify-between items-center border-b border-stone-200 pb-3">
+            <span class="text-xs font-black tracking-widest text-stone-900 uppercase">Siriai</span>
+            <span class="text-xs font-bold text-brand-accent bg-brand-accent/10 px-2.5 py-0.5 rounded-full">모집 중</span>
+        </div>
+
+        <!-- 웅장한 헤더 타이틀 및 세련된 마진 세팅 -->
+        <header class="text-left space-y-4">
+            <h1 class="text-4xl md:text-5xl font-black text-stone-950 premium-title leading-[1.15] tracking-tight">
+                시리아이 2026년 하반기<br>스킨케어 크리에이터 모집
+            </h1>
+            <p class="text-sm md:text-base text-brand-muted font-medium leading-relaxed">
+                정형화된 뷰티 공식을 벗어나, 브랜드 고유의 텍스처를 나만의 리드로 표현해 줄 전속 크리에이터를 매칭합니다. 아래 라인업과 혜택을 확인한 후 간편 통합 지원서를 제출하세요.
+            </p>
+        </header>
+
+        <!-- 무드 갤러리: 브랜드 화보 가로 무한 흐름 마퀴 (사진 개별 검정 테두리 + 검정 바 흰 브랜드명) -->
+        <section class="bg-white border border-stone-200/70 rounded-3xl p-5 md:p-6 shadow-[0_15px_45px_rgba(28,25,23,0.015)] card-premium space-y-4 overflow-hidden">
+            <div class="flex items-center gap-2 pb-3 border-b border-stone-100 mb-1">
+                <span class="text-xs font-black tracking-wider text-brand-accent uppercase">Mood Gallery</span>
+                <h4 class="text-lg font-bold text-stone-900 tracking-tight">캠페인 브랜드 라인업</h4>
+            </div>
+            <div class="marquee-wrap">
+                <div class="marquee-track gap-5 py-2">
+                    <!-- 1st set -->
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/cosrx.png" alt="COSRX" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">COSRX</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/itfu.png" alt="itfu" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">itfu</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/lusom.png" alt="lusom" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">lusom</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/ootd beauty.png" alt="OOTD Beauty" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">OOTD Beauty</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/skinsignal.png" alt="SkinSignal" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">SkinSignal</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/yadah.png" alt="yadah" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">yadah</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/뉴리클.png" alt="뉴리클" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">뉴리클</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/무신사스탠다드뷰티.png" alt="무신사 스탠다드 뷰티" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">무신사 스탠다드 뷰티</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/바이뉴셀.png" alt="바이뉴셀" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">바이뉴셀</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/이니스프리.png" alt="이니스프리" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">이니스프리</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/쿼드쎄라.png" alt="쿼드쎄라" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">쿼드쎄라</p>
+                    </div>
+                    <!-- 2nd set (seamless loop, 동일 복제) -->
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/cosrx.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">COSRX</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/itfu.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">itfu</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/lusom.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">lusom</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/ootd beauty.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">OOTD Beauty</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/skinsignal.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">SkinSignal</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/yadah.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">yadah</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/뉴리클.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">뉴리클</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/무신사스탠다드뷰티.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">무신사 스탠다드 뷰티</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/바이뉴셀.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">바이뉴셀</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/이니스프리.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">이니스프리</p>
+                    </div>
+                    <div class="flex-shrink-0 w-40 space-y-2.5" aria-hidden="true">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-black bg-stone-900"><img src="images/쿼드쎄라.png" alt="" class="w-full h-full object-cover"></div>
+                        <p class="text-center text-sm font-bold text-white bg-black rounded-lg py-1.5">쿼드쎄라</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 캠페인 핵심 혜택 및 조건 타일 보드 (부드러운 카드화 완료) -->
+        <section class="bg-white border border-stone-200/70 rounded-3xl p-6 shadow-[0_15px_45px_rgba(28,25,23,0.015)] card-premium space-y-4">
+            <div class="flex items-center gap-2 pb-2 border-b border-stone-100">
+                <span class="text-xs font-black tracking-wider text-brand-accent uppercase">About The Campaign</span>
+                <h4 class="text-lg font-bold text-stone-900 tracking-tight">이런 분들과 함께해요</h4>
+            </div>
+
+            <p class="text-sm text-brand-muted font-medium leading-relaxed pt-1">
+                오드타입 &amp; 무신사 PB 파트너 브랜드의 인스타그램 콘텐츠를 제작해주실 크리에이터를 모집합니다.
+            </p>
+
+            <div class="grid grid-cols-3 gap-3.5 pt-1">
+                <div class="bg-stone-50/50 border border-stone-200/60 rounded-2xl p-4.5 text-center space-y-1.5 hover:border-brand-accent hover:bg-white transition duration-300">
+                    <span class="text-xl">💰</span>
+                    <p class="text-[11px] font-bold text-stone-400">고료</p>
+                    <p class="text-xs md:text-sm font-black text-rose-500">200,000원</p>
+                </div>
+                <div class="bg-stone-50/50 border border-stone-200/60 rounded-2xl p-4.5 text-center space-y-1.5 hover:border-brand-accent hover:bg-white transition duration-300">
+                    <span class="text-xl">📷</span>
+                    <p class="text-[11px] font-bold text-stone-400">플랫폼</p>
+                    <p class="text-xs md:text-sm font-black text-stone-900">인스타그램</p>
+                </div>
+                <div class="bg-stone-50/50 border border-stone-200/60 rounded-2xl p-4.5 text-center space-y-1.5 hover:border-brand-accent hover:bg-white transition duration-300">
+                    <span class="text-xl">✅</span>
+                    <p class="text-[11px] font-bold text-stone-400">조건</p>
+                    <p class="text-xs md:text-sm font-black text-stone-900">팔로워 무관</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 정돈된 미션 정보 아코디언 드롭다운 (부드러운 카드화 완료) -->
+        <section class="bg-white border border-stone-200/70 rounded-3xl p-6 shadow-[0_15px_45px_rgba(28,25,23,0.015)] card-premium space-y-4">
+            <div class="flex items-center gap-2 pb-2 border-b border-stone-100">
+                <span class="text-xs font-black tracking-wider text-brand-accent uppercase">Campaign Guide</span>
+                <h4 class="text-lg font-bold text-stone-900 tracking-tight">캠페인 개요</h4>
+            </div>
+            
+            <div class="space-y-3 pt-1">
+                <!-- 아코디언 2 -->
+                <div class="bg-stone-50/20 border border-stone-200/60 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button onclick="toggleAccordion('accordion-2')" class="w-full px-5 py-4 flex justify-between items-center text-left font-bold text-sm md:text-base text-stone-900 hover:bg-stone-50/50">
+                        <span>미션 내용</span>
+                        <svg id="arrow-accordion-2" class="w-4 h-4 text-stone-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="accordion-2" class="accordion-content border-stone-100 bg-stone-50/40 text-xs md:text-sm text-stone-600 leading-relaxed">
+                        <div class="p-5 space-y-2.5">
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="font-medium text-stone-500">콘텐츠 형식</span>
+                                <span class="font-bold text-stone-900">릴스 (20초 이상)</span>
+                            </div>
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="font-medium text-stone-500">공동작업자</span>
+                                <span class="font-bold text-stone-900">필수</span>
+                            </div>
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="font-medium text-stone-500">2차 활용</span>
+                                <span class="font-bold text-stone-900">필수</span>
+                            </div>
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="font-medium text-stone-500">업로드 유지기한</span>
+                                <span class="font-bold text-stone-900">3개월</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 웅장한 대형 카드형 통합 캠페인 지원서 세션 -->
+        <main class="w-full">
+            <div class="bg-white border border-stone-200 shadow-[0_30px_60px_rgba(0,0,0,0.02)] rounded-3xl p-6 sm:p-10 space-y-8 card-premium">
+                
+                <div class="flex items-center justify-between border-b border-stone-100 pb-4">
+                    <h2 class="text-xl md:text-2xl font-black text-stone-950 tracking-tight flex items-center gap-2">
+                        📄 캠페인 지원서
+                    </h2>
+                    <span class="text-xs text-stone-400 font-semibold"><span class="text-red-500">*</span> 필수</span>
+                </div>
+                
+                <form id="siriaiUnifiedForm" onsubmit="submitSiriaiForm(event)" class="space-y-6" novalidate>
+                    
+                    <!-- 지원 옵션 구분 세션 -->
+                    <div class="space-y-3 bg-stone-50/80 p-5 rounded-2xl border border-stone-200/60">
+                        <label class="block text-sm font-bold text-stone-800">지원 옵션 선택 <span class="text-red-500">*</span></label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="selection-card flex items-center justify-center gap-2 bg-white border-2 border-stone-200 p-4 rounded-xl cursor-pointer select-none text-sm font-bold transition-all duration-250 hover:border-brand-primary [&:has(input:checked)]:border-brand-primary [&:has(input:checked)]:bg-brand-primary/[0.02] [&:has(input:checked)]:shadow-sm">
+                                <input type="radio" name="support_type" value="all" checked onchange="toggleSupportScope()" class="accent-brand-primary w-4 h-4">
+                                전체 지원하기
+                            </label>
+                            <label class="selection-card flex items-center justify-center gap-2 bg-white border-2 border-stone-200 p-4 rounded-xl cursor-pointer select-none text-sm font-bold transition-all duration-250 hover:border-brand-primary [&:has(input:checked)]:border-brand-primary [&:has(input:checked)]:bg-brand-primary/[0.02] [&:has(input:checked)]:shadow-sm">
+                                <input type="radio" name="support_type" value="individual" onchange="toggleSupportScope()" class="accent-brand-primary w-4 h-4">
+                                개별 지원하기
+                            </label>
+                        </div>
+                        
+                        <!-- 개별 지원 브랜드 멀티 선택 레이아웃 -->
+                        <div id="individual-brand-selector" class="hidden pt-4 mt-2 border-t border-stone-200 space-y-3">
+                            <p class="text-xs font-bold text-stone-500 tracking-wider">매칭 대상 브랜드를 수동 지정해 주세요 (중복 선택 가능)</p>
+                            <div class="grid grid-cols-3 gap-2.5">
+                                <div class="flex flex-col gap-1.5">
+                                    <label class="selection-card flex items-center justify-center gap-2 bg-white border border-stone-200 p-3 rounded-xl cursor-pointer text-sm font-bold select-none hover:border-brand-accent transition-all [&:has(input:checked)]:border-brand-accent [&:has(input:checked)]:bg-brand-accent/[0.03]">
+                                        <input type="checkbox" name="selected_brands" value="if:fu" onchange="validateBrandSelection()" class="rounded text-brand-accent focus:ring-brand-accent w-4 h-4">
+                                        <span>if:fu</span>
+                                    </label>
+                                    <a href="https://itfu-guideline.vercel.app/" target="_blank" rel="noopener" class="text-[11px] font-bold text-brand-accent text-center hover:underline">상세보기 →</a>
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <label class="selection-card flex items-center justify-center gap-2 bg-white border border-stone-200 p-3 rounded-xl cursor-pointer text-sm font-bold select-none hover:border-brand-accent transition-all [&:has(input:checked)]:border-brand-accent [&:has(input:checked)]:bg-brand-accent/[0.03]">
+                                        <input type="checkbox" name="selected_brands" value="Lusom" onchange="validateBrandSelection()" class="rounded text-brand-accent focus:ring-brand-accent w-4 h-4">
+                                        <span>Lusom</span>
+                                    </label>
+                                    <a href="https://lusom-guide.vercel.app/" target="_blank" rel="noopener" class="text-[11px] font-bold text-brand-accent text-center hover:underline">상세보기 →</a>
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <label class="selection-card flex items-center justify-center gap-2 bg-white border border-stone-200 p-3 rounded-xl cursor-pointer text-sm font-bold select-none hover:border-brand-accent transition-all [&:has(input:checked)]:border-brand-accent [&:has(input:checked)]:bg-brand-accent/[0.03]">
+                                        <input type="checkbox" name="selected_brands" value="Yadah" onchange="validateBrandSelection()" class="rounded text-brand-accent focus:ring-brand-accent w-4 h-4">
+                                        <span>Yadah</span>
+                                    </label>
+                                    <a href="https://yadah-guide.vercel.app/campaign-a" target="_blank" rel="noopener" class="text-[11px] font-bold text-brand-accent text-center hover:underline">상세보기 →</a>
+                                </div>
+                            </div>
+                            <span id="brand_feedback" class="text-xs font-bold transition-all duration-200 block pt-1"></span>
+                        </div>
+                    </div>
+
+                    <!-- 이름 -->
+                    <div class="space-y-1.5">
+                        <label for="form_name" class="flex justify-between text-sm font-bold text-stone-800">
+                            <span>이름 <span class="text-red-500">*</span></span>
+                            <span id="name_feedback" class="text-xs font-semibold transition-all"></span>
+                        </label>
+                        <input type="text" id="form_name" name="name" required placeholder="실명을 입력해주세요" 
+                               class="w-full input-luxury" oninput="validateName()">
+                    </div>
+
+                    <!-- 인스타그램 링크 -->
+                    <div class="space-y-1.5">
+                        <label for="form_instagram" class="flex justify-between text-sm font-bold text-stone-800">
+                            <span>인스타그램 링크 <span class="text-red-500">*</span></span>
+                            <span id="instagram_feedback" class="text-xs font-semibold transition-all"></span>
+                        </label>
+                        <input type="url" id="form_instagram" name="instagram" required placeholder="https://instagram.com/내아이디" 
+                               class="w-full input-luxury" oninput="validateInstagram()">
+                    </div>
+
+                    <!-- 휴대폰 -->
+                    <div class="space-y-1.5">
+                        <label for="form_phone" class="flex justify-between text-sm font-bold text-stone-800">
+                            <span>휴대폰 <span class="text-red-500">*</span></span>
+                            <span id="phone_feedback" class="text-xs font-semibold transition-all"></span>
+                        </label>
+                        <input type="tel" id="form_phone" name="phone" required placeholder="010-0000-0000" maxlength="13" 
+                               class="w-full input-luxury" oninput="handlePhoneInput(this); validatePhone();">
+                    </div>
+
+                    <!-- 이메일 (선택) -->
+                    <div class="space-y-1.5">
+                        <label for="form_email" class="flex justify-between text-sm font-bold text-stone-800">
+                            <span>이메일 (선택)</span>
+                            <span id="email_feedback" class="text-xs font-semibold transition-all"></span>
+                        </label>
+                        <input type="email" id="form_email" name="email" placeholder="email@example.com" 
+                               class="w-full input-luxury" oninput="validateEmail()">
+                    </div>
+
+                    <!-- 우편번호 -->
+                    <div class="space-y-1.5">
+                        <label for="siriai_zonecode" class="block text-sm font-bold text-stone-800">
+                            우편번호 <span class="text-red-500">*</span>
+                        </label>
+                        <div class="flex gap-2.5">
+                            <input type="text" id="siriai_zonecode" name="zonecode" required readonly placeholder="주소 검색 시 자동 입력"
+                                   class="flex-1 input-luxury cursor-not-allowed bg-stone-50 border-stone-200">
+                            <button type="button" onclick="openPostcodeSearch()"
+                                    class="bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold px-6 rounded-2xl transition shadow-sm whitespace-nowrap active:scale-[0.98]">
+                                주소 검색
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 배송지 주소 -->
+                    <div class="space-y-1.5">
+                        <label for="siriai_address" class="block text-sm font-bold text-stone-800">
+                            배송지 주소 <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="siriai_address" name="address" required readonly placeholder="주소 검색을 클릭해 주세요"
+                               class="w-full input-luxury cursor-not-allowed bg-stone-50 border-stone-200">
+                    </div>
+
+                    <!-- 상세 주소 -->
+                    <div class="space-y-1.5">
+                        <label for="form_address_detail" class="flex justify-between text-sm font-bold text-stone-800">
+                            <span>상세 주소 <span class="text-red-500">*</span></span>
+                            <span id="detail_address_feedback" class="text-xs font-semibold transition-all"></span>
+                        </label>
+                        <input type="text" id="form_address_detail" name="address_detail" required placeholder="상세 주소 (동, 호수 등)" 
+                               class="w-full input-luxury" oninput="validateDetailAddress()">
+                    </div>
+
+                    <!-- 요청사항 -->
+                    <div class="space-y-1.5">
+                        <label for="form_notes" class="block text-sm font-bold text-stone-800">
+                            요청사항 (선택)
+                        </label>
+                        <textarea id="form_notes" name="notes" placeholder="기타 전달사항이 있다면 적어주세요." rows="2" 
+                                  class="w-full input-luxury resize-none"></textarea>
+                    </div>
+
+                    <!-- 배송지 경고 주석 알림 박스 -->
+                    <div class="bg-[#FFF8F7] border border-brand-accent/15 rounded-2xl p-4 flex items-start gap-3">
+                        <span class="text-brand-accent text-base leading-none">⚠️</span>
+                        <p class="text-xs md:text-sm text-[#A94442] font-semibold leading-relaxed">
+                            배송지는 매 캠페인마다 새로 확인합니다. 오배송 방지를 위해 입력값을 다시 한번 체크바랍니다.
+                        </p>
+                    </div>
+
+                    <!-- 업로드·정산 안내 박스 -->
+                    <div class="bg-stone-50/80 border border-stone-200/60 rounded-2xl p-4 space-y-2">
+                        <p class="text-sm font-bold text-stone-800 flex items-center gap-2">
+                            <span class="text-brand-accent">📌</span> 업로드·정산 안내
+                        </p>
+                        <ul class="text-xs md:text-sm text-stone-600 font-medium leading-relaxed space-y-1 pl-1">
+                            <li>· 안내된 업로드 마감일까지 업로드 시 정산이 진행됩니다.</li>
+                            <li>· 정산은 매월 5일 일괄 지급됩니다.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 미업로드 시 원가 청구 동의 (필수) -->
+                    <div class="space-y-1.5">
+                        <label class="flex items-start gap-3 cursor-pointer select-none">
+                            <input type="checkbox" id="form_agree" name="agree" required onchange="validateAgree()" class="mt-0.5 w-4 h-4 rounded text-brand-accent focus:ring-brand-accent">
+                            <span class="text-xs md:text-sm text-stone-600 font-medium leading-relaxed">
+                                선정 후 미업로드 시 제공받은 제품의 원가를 청구받는 데 동의합니다. <span class="text-red-500 font-bold">(필수)</span>
+                            </span>
+                        </label>
+                        <span id="agree_feedback" class="text-xs font-bold transition-all block pl-7"></span>
+                    </div>
+
+                    <!-- 최종 서브밋 프레임 버튼 -->
+                    <div class="pt-2">
+                        <button type="submit" 
+                                class="w-full bg-brand-primary text-white py-4.5 rounded-2xl font-bold tracking-wide text-sm md:text-base hover:bg-brand-hover transition-all duration-200 shadow-md hover:shadow-xl active:scale-[0.99] flex items-center justify-center gap-2">
+                            <span>2026 하반기 스킨케어 통합 지원서 제출하기</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+        
+        <!-- 푸터 -->
+        <footer class="text-center text-[11px] text-stone-400 pb-4">
+            &copy; 2026 Siriai. Architecture for Insight, AI All rights reserved.
+        </footer>
+    </div>
+
+
+    <!-- 결과 알림 모달 -->
+    <div id="custom-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4">
+        <div class="fixed inset-0 bg-black/50 backdrop-blur-[3px] animate-fade-in-overlay" onclick="closeCustomModal()"></div>
+        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full shadow-2xl relative z-10 text-center animate-fade-in space-y-5 border border-stone-100">
+            <div id="modal-icon-container" class="mx-auto w-16 h-16 rounded-full flex items-center justify-center"></div>
+            <div class="space-y-2">
+                <h3 id="modal-title" class="text-xl font-bold text-stone-900 tracking-tight">알림</h3>
+                <p id="modal-desc" class="text-sm text-stone-500 font-medium leading-relaxed whitespace-pre-line"></p>
+            </div>
+            <button onclick="closeCustomModal()" id="modal-confirm-btn" class="w-full py-3.5 rounded-xl font-bold text-sm text-white shadow-sm transition duration-200 active:scale-[0.98]">확인</button>
+        </div>
+    </div>
+
+    <!-- 스크립트 트랙 -->
+    <script>
+        // ▼▼▼ 구글 시트 연동 설정 ▼▼▼
+        // 1) Google Apps Script 웹앱을 배포한 뒤 받은 URL을 아래에 붙여넣으세요. (3개 페이지 모두 같은 URL 사용 → 한 시트에 모임)
+        const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwNpcZCYAjNp2fl0Ddvaasi8zgMpRtyHmEG1emqyGoB4lHYvGAfal6d2jSIZXoTO7mT3g/exec';
+        // 2) 이 페이지의 고료 금액 (시트에서 페이지 구분용). 변형 파일에서는 이 값만 다릅니다.
+        const CAMPAIGN_AMOUNT = '200,000원';
+        // ▲▲▲ 구글 시트 연동 설정 ▲▲▲
+
+        const form = document.getElementById('siriaiUnifiedForm');
+        const customModal = document.getElementById('custom-modal');
+
+        const validationState = {
+            name: false, instagram: false, phone: false, email: true, address: false, address_detail: false, brands: true, agree: false
+        };
+
+        // 아코디언 드롭다운 온클릭 가시성 스위칭 모듈 (부드러운 슬라이딩 트랜지션 적용)
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const arrow = document.getElementById(`arrow-${id}`);
+            const isOpen = el.classList.contains('open');
+            
+            if (isOpen) {
+                el.style.maxHeight = '0px';
+                el.classList.remove('open');
+                arrow.classList.remove('rotate-180');
+            } else {
+                el.classList.add('open');
+                el.style.maxHeight = el.scrollHeight + 'px';
+                arrow.classList.add('rotate-180');
+            }
+        }
+
+        function toggleSupportScope() {
+            const supportType = document.querySelector('input[name="support_type"]:checked').value;
+            const selectorDiv = document.getElementById('individual-brand-selector');
+            const feedbackEl = document.getElementById('brand_feedback');
+            
+            if (supportType === 'individual') {
+                selectorDiv.classList.remove('hidden');
+                validateBrandSelection();
+            } else {
+                selectorDiv.classList.add('hidden');
+                if (feedbackEl) feedbackEl.textContent = '';
+                validationState.brands = true;
+            }
+        }
+
+        function validateBrandSelection() {
+            const supportType = document.querySelector('input[name="support_type"]:checked').value;
+            if (supportType !== 'individual') {
+                validationState.brands = true;
+                return true;
+            }
+            const checkedBrands = document.querySelectorAll('input[name="selected_brands"]:checked');
+            const feedbackEl = document.getElementById('brand_feedback');
+            const isValid = checkedBrands.length > 0;
+            validationState.brands = isValid;
+
+            if (!feedbackEl) return isValid;
+
+            if (!isValid) {
+                feedbackEl.textContent = '⚠ 개별 지원 시 최소 하나 이상의 브랜드를 선택해야 합니다.';
+                feedbackEl.className = 'text-xs font-bold text-rose-500 block pt-1';
+            } else {
+                feedbackEl.textContent = '✓ 브랜드 빌딩 풀 가속 매칭 대기';
+                feedbackEl.className = 'text-xs font-bold text-emerald-600 block pt-1';
+            }
+            return isValid;
+        }
+
+        function handlePhoneInput(el) {
+            let val = el.value.replace(/[^0-9]/g, '');
+            if (val.length < 4) { el.value = val; } 
+            else if (val.length < 8) { el.value = val.substr(0, 3) + '-' + val.substr(3); } 
+            else { el.value = val.substr(0, 3) + '-' + val.substr(3, 4) + '-' + val.substr(7, 4); }
+        }
+
+        function showFeedback(fieldId, isValid, message) {
+            const feedbackEl = document.getElementById(`${fieldId}_feedback`);
+            const inputEl = document.getElementById(`form_${fieldId}`);
+            
+            if (!feedbackEl) return;
+
+            if (isValid) {
+                feedbackEl.textContent = '✓ 올바른 입력입니다';
+                feedbackEl.className = 'text-xs font-bold text-emerald-600';
+                if (inputEl) {
+                    inputEl.classList.remove('border-red-400', 'focus:ring-red-100');
+                    inputEl.classList.add('border-emerald-500', 'focus:ring-emerald-50');
+                }
+            } else {
+                feedbackEl.textContent = message;
+                feedbackEl.className = 'text-xs font-bold text-rose-500';
+                if (inputEl) {
+                    inputEl.classList.remove('border-emerald-500', 'focus:ring-emerald-50');
+                    inputEl.classList.add('border-red-400', 'focus:ring-red-100');
+                }
+            }
+        }
+
+        function validateName() {
+            const el = document.getElementById('form_name');
+            const val = el.value.trim();
+            const isValid = val.length >= 2;
+            validationState.name = isValid;
+            
+            if (val === '') {
+                showFeedback('name', false, '이름은 필수 입력 항목입니다.');
+            } else if (!isValid) {
+                showFeedback('name', false, '이름은 2자 이상 정확히 입력해주세요.');
+            } else {
+                showFeedback('name', true);
+            }
+            return isValid;
+        }
+
+        // 인스타그램 주소 검증
+        function validateInstagram() {
+            const el = document.getElementById('form_instagram');
+            const val = el.value.trim();
+            const instaRegex = /^(https?:\/\/)?(www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/;
+            const isValid = instaRegex.test(val);
+            validationState.instagram = isValid;
+            
+            if (val === '') {
+                showFeedback('instagram', false, '인스타그램 링크는 필수 입력 항목입니다.');
+            } else if (!isValid) {
+                showFeedback('instagram', false, '인스타그램 주소 서식을 확인하세요 (https://instagram.com/ID).');
+            } else {
+                showFeedback('instagram', true);
+            }
+            return isValid;
+        }
+
+        function validatePhone() {
+            const el = document.getElementById('form_phone');
+            const val = el.value.trim();
+            const phoneRegex = /^01[016789]-\d{3,4}-\d{4}$/;
+            const isValid = phoneRegex.test(val);
+            validationState.phone = isValid;
+            
+            if (val === '') {
+                showFeedback('phone', false, '휴대폰 번호는 필수 입력 항목입니다.');
+            } else if (!isValid) {
+                showFeedback('phone', false, '번호 포맷 오류입니다 (010-0000-0000).');
+            } else {
+                showFeedback('phone', true);
+            }
+            return isValid;
+        }
+
+        function validateEmail() {
+            const el = document.getElementById('form_email');
+            const val = el.value.trim();
+            if (val === '') {
+                const feedbackEl = document.getElementById('email_feedback');
+                if (feedbackEl) feedbackEl.textContent = '';
+                el.classList.remove('border-red-400', 'border-emerald-500');
+                validationState.email = true;
+                return true;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const isValid = emailRegex.test(val);
+            validationState.email = isValid;
+
+            if (!isValid) {
+                showFeedback('email', false, '이메일 형식 오류입니다.');
+            } else {
+                showFeedback('email', true);
+            }
+            return isValid;
+        }
+
+        function validateDetailAddress() {
+            const el = document.getElementById('form_address_detail');
+            const val = el.value.trim();
+            const isValid = val.length > 0;
+            validationState.address_detail = isValid;
+
+            if (!isValid) {
+                showFeedback('detail_address', false, '상세 주소를 채워주세요.');
+            } else {
+                showFeedback('detail_address', true);
+            }
+            return isValid;
+        }
+
+        function validateAgree() {
+            const el = document.getElementById('form_agree');
+            const feedbackEl = document.getElementById('agree_feedback');
+            const isValid = el.checked;
+            validationState.agree = isValid;
+
+            if (!feedbackEl) return isValid;
+            if (!isValid) {
+                feedbackEl.textContent = '⚠ 필수 동의 항목입니다.';
+                feedbackEl.className = 'text-xs font-bold text-rose-500 block pl-7';
+            } else {
+                feedbackEl.textContent = '';
+            }
+            return isValid;
+        }
+
+        function openPostcodeSearch() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    let fullAddress = data.roadAddress;
+                    let extraAddress = '';
+                    if (data.userSelectedType === 'R') {
+                        if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) { extraAddress += data.bname; }
+                        if (data.buildingName !== '' && data.apartment === 'Y') { extraAddress += (extraAddress !== '' ? ', ' + data.buildingName : data.buildingName); }
+                        fullAddress += (extraAddress !== '' ? ' (' + extraAddress + ')' : '');
+                    }
+                    document.getElementById('siriai_zonecode').value = data.zonecode;
+                    document.getElementById('siriai_address').value = fullAddress;
+                    validationState.address = true;
+                    document.getElementById('form_address_detail').focus();
+                }
+            }).open();
+        }
+
+        function showCustomModal(type, title, desc) {
+            const iconContainer = document.getElementById('modal-icon-container');
+            const confirmBtn = document.getElementById('modal-confirm-btn');
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-desc').textContent = desc;
+
+            if (type === 'success') {
+                iconContainer.className = 'mx-auto w-16 h-16 rounded-full flex items-center justify-center bg-emerald-50 text-emerald-500';
+                iconContainer.innerHTML = `<svg class="w-10 h-10 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>`;
+                confirmBtn.className = 'w-full py-3.5 rounded-xl font-bold text-sm text-white shadow-sm bg-emerald-500 hover:bg-emerald-600 transition active:scale-[0.98]';
+            } else {
+                iconContainer.className = 'mx-auto w-16 h-16 rounded-full flex items-center justify-center bg-rose-50 text-rose-500';
+                iconContainer.innerHTML = `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
+                confirmBtn.className = 'w-full py-3.5 rounded-xl font-bold text-sm text-white shadow-sm bg-rose-500 hover:bg-rose-600 transition active:scale-[0.98]';
+            }
+            customModal.classList.remove('hidden');
+        }
+
+        function closeCustomModal() { customModal.classList.add('hidden'); }
+
+        // 구글 시트로 신청 내용 전송 (Apps Script 웹앱 POST)
+        function sendToSheet() {
+            const supportType = document.querySelector('input[name="support_type"]:checked').value;
+            const brands = Array.from(document.querySelectorAll('input[name="selected_brands"]:checked')).map(el => el.value);
+
+            const payload = {
+                amount: CAMPAIGN_AMOUNT,
+                support_type: supportType === 'all' ? '전체 지원' : '개별 지원',
+                brands: supportType === 'all' ? '전체' : brands.join(', '),
+                name: document.getElementById('form_name').value.trim(),
+                instagram: document.getElementById('form_instagram').value.trim(),
+                phone: document.getElementById('form_phone').value.trim(),
+                email: document.getElementById('form_email').value.trim(),
+                zonecode: document.getElementById('siriai_zonecode').value.trim(),
+                address: document.getElementById('siriai_address').value.trim(),
+                address_detail: document.getElementById('form_address_detail').value.trim(),
+                notes: document.getElementById('form_notes').value.trim(),
+                agree: document.getElementById('form_agree').checked ? '동의' : '미동의'
+            };
+
+            if (!SHEET_ENDPOINT || SHEET_ENDPOINT.indexOf('PASTE_') === 0) {
+                console.warn('SHEET_ENDPOINT가 설정되지 않아 구글 시트 전송을 건너뜁니다.');
+                return;
+            }
+
+            fetch(SHEET_ENDPOINT, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.error('구글 시트 전송 실패:', err));
+        }
+
+        function submitSiriaiForm(event) {
+            event.preventDefault();
+            validationState.address = document.getElementById('siriai_address').value.trim() !== '';
+
+            const isNameValid = validateName();
+            const isInstaValid = validateInstagram();
+            const isPhoneValid = validatePhone();
+            const isEmailValid = validateEmail();
+            const isDetailAddrValid = validateDetailAddress();
+            const isBrandsValid = validateBrandSelection();
+            const isAgreeValid = validateAgree();
+            const isAddrValid = validationState.address;
+
+            if (isNameValid && isInstaValid && isPhoneValid && isEmailValid && isDetailAddrValid && isBrandsValid && isAgreeValid && isAddrValid) {
+                sendToSheet();
+                showCustomModal('success', '제출 완료', '✨ Siriai 하반기 스킨케어 캠페인 풀에\n크리에이터 등록이 완료되었습니다.');
+                form.reset();
+                document.getElementById('individual-brand-selector').classList.add('hidden');
+                document.querySelectorAll('[id$="_feedback"]').forEach(el => el.textContent = '');
+                document.querySelectorAll('.input-luxury').forEach(input => {
+                    input.classList.remove('border-emerald-500', 'border-red-400');
+                });
+                validationState.address = false;
+                validationState.brands = true;
+                validationState.agree = false;
+            } else {
+                let errorMsg = '작성 양식 에러 항목을 다시 체크해 주세요.';
+                if (!isAddrValid) { errorMsg = '배송지 주소 검색을 완료해 주세요.'; }
+                else if (!isBrandsValid) { errorMsg = '개별 지원 대상 브랜드를 선택해 주세요.'; }
+                else if (!isAgreeValid) { errorMsg = '원가 청구 동의 항목에 체크해 주세요.'; }
+                showCustomModal('error', '제출 실패', errorMsg);
+            }
+        }
+    </script>
+</body>
+</html>
