@@ -44,6 +44,9 @@
   .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(0,0,0,.3); }
   .fig:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -28px rgba(0,0,0,.4); }
   .req { color: var(--accent); }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
@@ -316,6 +319,25 @@
     if (!agreed) { alert('필수 동의 항목에 체크해 주세요.'); return; }
     alert('지원서가 제출되었습니다.');
   });
+  // scroll reveal — 밑에서 위로 슬라이드 업
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    function mark(sel) {
+      document.querySelectorAll(sel).forEach(function (el, i) {
+        el.classList.add('reveal');
+        el.style.transitionDelay = ((i % 6) * 0.09) + 's';
+        io.observe(el);
+      });
+    }
+    mark('.card');
+    mark('#guide .wrap > div');
+    mark('#applyForm > *');
+  })();
 })();
 </script>
 </body>
