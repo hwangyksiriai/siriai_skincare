@@ -69,6 +69,31 @@
     h1.head { font-size: 1.7rem !important; }
     h2.head { font-size: 1.4rem !important; }
   }
+
+  /* ===== 요청 조정: hero/라인업 축소 + 혜택카드 가로형(낮게) ===== */
+  .hero-stats .head { font-size: 19px !important; }
+  .hero-stats > div { padding-top: 14px !important; }
+  .card {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    align-content: center;
+    column-gap: 15px;
+    padding: 16px 20px !important;
+  }
+  .card > :first-child { grid-column: 1; grid-row: 1 / 4; }
+  .card > :nth-child(2) { margin-top: 0 !important; }
+  .card .head { font-size: 21px !important; margin-top: 2px !important; }
+  .card > :nth-child(4) { margin-top: 3px !important; line-height: 1.45 !important; }
+  @media (max-width: 600px) {
+    .hero-stats .head { font-size: 15px !important; }
+    .hero-stats > div { padding: 10px 0 0 0 !important; }
+    .fig { width: 146px !important; }
+    .fig figcaption { padding: 8px 11px !important; }
+    .fig figcaption .head { font-size: 12.5px !important; }
+    .card { padding: 15px 17px !important; }
+    .card .head { font-size: 19px !important; }
+  }
 </style>
 </head>
 <body>
