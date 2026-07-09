@@ -31,6 +31,20 @@
 </head>
 <body class="bg-brand-bg text-stone-900 antialiased py-8 md:py-16 px-4">
 
+    <!-- 비밀번호 게이트 -->
+    <div id="password-gate" class="fixed inset-0 z-50 bg-brand-bg flex items-center justify-center px-4">
+        <form id="password-form" class="w-full max-w-xs bg-white border border-stone-200/70 rounded-3xl p-6 shadow-[0_15px_45px_rgba(28,25,23,0.06)] space-y-4 text-center">
+            <p class="text-xs font-black tracking-widest text-brand-accent uppercase">Siriai</p>
+            <h2 class="text-lg font-bold text-stone-900">비밀번호를 입력해 주세요</h2>
+            <input id="password-input" type="password" inputmode="numeric" autocomplete="off"
+                class="w-full border border-stone-200 rounded-xl px-4 py-2.5 text-center text-sm focus:outline-none focus:border-brand-accent"
+                placeholder="비밀번호">
+            <p id="password-error" class="hidden text-xs font-bold text-rose-500">비밀번호가 올바르지 않습니다.</p>
+            <button type="submit"
+                class="w-full bg-brand-primary hover:bg-brand-accentHover text-white text-sm font-bold py-2.5 rounded-xl transition-all duration-200">확인</button>
+        </form>
+    </div>
+
     <div class="w-full max-w-2xl mx-auto space-y-12">
 
         <!-- TOP BRANDING ROW -->
@@ -123,5 +137,39 @@
         </footer>
     </div>
 
+    <script>
+        (function () {
+            var SITE_PASSWORD = '0907';
+            var STORAGE_KEY = 'siriai_hub_auth';
+            var gate = document.getElementById('password-gate');
+            var form = document.getElementById('password-form');
+            var input = document.getElementById('password-input');
+            var error = document.getElementById('password-error');
+
+            function unlock() {
+                sessionStorage.setItem(STORAGE_KEY, '1');
+                gate.style.display = 'none';
+            }
+
+            if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+                gate.style.display = 'none';
+            } else {
+                document.body.style.overflow = 'hidden';
+                gate.addEventListener('transitionend', function () {}, false);
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (input.value === SITE_PASSWORD) {
+                    document.body.style.overflow = '';
+                    unlock();
+                } else {
+                    error.classList.remove('hidden');
+                    input.value = '';
+                    input.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
